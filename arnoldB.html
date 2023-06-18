@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>POUMOUGNE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.js"></script>
+    <style>
+      #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+    </style>
+  </head>
+  <body>
+    <div id="map">
+      <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
+    </div>
+    <p><a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a></p>
+    <script>
+      var redIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+      const key = '3IsMhAJ1tcQcwgk4SqXV';
+      const map = L.map('map').setView([5.2749, 10.48002], 13); //starting position
+      L.tileLayer(`https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=3IsMhAJ1tcQcwgk4SqXV`,{ //style URL
+        tileSize: 512,
+        zoomOffset: -1,
+        minZoom:1,
+        attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+        crossOrigin: true
+      }).addTo(map);
+      L.marker([5.356335,10.43197]) .addTo(map) .bindPopup("<b>ep de nkouo</b>").openPopup();
+      L.marker([5.349612,10.42927], {icon: redIcon}) .addTo(map) .bindPopup("<b>ecole catholique de famwa</b>").openPopup();
+      L.marker([5.37333,10.413]) .addTo(map) .bindPopup("<b>ecole publique de bandjoun centre</b>").openPopup();
+      L.marker([5.37351,10.4129]) .addTo(map) .bindPopup("<b>ecole publique groupe II bandjoun centre</b>").openPopup();
+      L.marker([5.37355,10.4121]) .addTo(map) .bindPopup("<b>ecole maternelle de bandjoun centre</b>").openPopup();
+      L.marker([5.37371,10.4124]) .addTo(map) .bindPopup("<b>ecole publique bilingue de bandjoun centre</b>").openPopup();
+      L.marker([5.37395,10.4122]) .addTo(map) .bindPopup("<b>ecole maternelle d'application de bandjoun</b>").openPopup();
+      L.marker([5.3739,10.412]) .addTo(map) .bindPopup("<b>ecole maternelle bandjoun II </b>").openPopup();
+      L.marker([5.37863,10.4118]) .addTo(map) .bindPopup("<b>centre de promotion de la femme et de la famille de bandjoun </b>").openPopup();
+      L.marker([5.37921,10.4094]) .addTo(map) .bindPopup("<b>ecole privee bilingue les bourgeons </b>").openPopup();
+      L.marker([5.37914,10.4092]) .addTo(map) .bindPopup("<b>IFGEC  </b>").openPopup();
+      L.marker([5.37981,10.4034]) .addTo(map) .bindPopup("<b>LYCEE DE BANDJOUN  </b>").openPopup();
+      L.marker([5.38341,10.4025]) .addTo(map) .bindPopup("<b>Centre medical marie et michel  </b>").openPopup();
+      L.marker([5.38343,10.3974]) .addTo(map) .bindPopup("<b>ecole primaire catholique de katsela  </b>").openPopup();
+      L.marker([5.38483,10.3975]) .addTo(map) .bindPopup("<b>ecole maternelle catholique de katsela  </b>").openPopup();
+      L.marker([5.38688,10.3906]) .addTo(map) .bindPopup("<b>ecole primaire catholique sainte therese annexe   </b>").openPopup();
+      L.marker([5.39529,10.3941]) .addTo(map) .bindPopup("<b>centre de sante polyvalent nono   </b>").openPopup();
+      L.marker([5.40173,10.3863]) .addTo(map) .bindPopup("<b>ecole publique de tsela   </b>").openPopup();
+      L.marker([5.40135,10.3866]) .addTo(map) .bindPopup("<b>ecole maternelle de tsela   </b>").openPopup();
+      L.marker([5.4029,10.3861]) .addTo(map) .bindPopup("<b>ecole centre de sante integre de tsela   </b>").openPopup();
+      L.marker([5.410544,10.3847]) .addTo(map) .bindPopup("<b>ecole catholique sainte therese de tsela  </b>").openPopup();
+      L.marker([5.40033,10.3757]) .addTo(map) .bindPopup("<b>lycee de tsela   </b>").openPopup();
+      L.marker([5.37751,10.4064]) .addTo(map) .bindPopup("<b>lycee technique de bandjoun   </b>").openPopup();
+      L.marker([5.37542,10.4065]) .addTo(map) .bindPopup("<b>groupe scolaire prive laic bilingue la joie de poumogne   </b>").openPopup();
+      L.marker([5.3759,10.4066]) .addTo(map) .bindPopup("<b>cabinet de soin la grace   </b>").openPopup();
+      L.marker([5.37481,10.4048]) .addTo(map) .bindPopup("<b>poumogne health center   </b>").openPopup();
+      L.marker([5.38085,10.4177]) .addTo(map) .bindPopup("<b>college technique paul bouque   </b>").openPopup();
+      L.marker([5.38085,10.4182]) .addTo(map) .bindPopup("<b>ecole primaire bilingue saint charles   </b>").openPopup();
+      L.marker([5.38086,10.4162]) .addTo(map) .bindPopup("<b>college catholique saint joseph   </b>").openPopup();
+      L.marker([5.38106,10.4169]) .addTo(map) .bindPopup("<b>ecole primaire saint charles   </b>").openPopup();
+      L.marker([5.38118,10.417]) .addTo(map) .bindPopup("<b>ecole maternelle saint charles   </b>").openPopup();
+      L.marker([5.37978,10.4148]) .addTo(map) .bindPopup("<b>hopital adlucem   </b>").openPopup();
+      L.marker([5.39477,10.4017]) .addTo(map) .bindPopup("<b>ecole publique bilingue de famleng-topo   </b>").openPopup();
+      L.marker([5.39477,10.4017]) .addTo(map) .bindPopup("<b>ecole maternelle bilingue de famleng-topo   </b>").openPopup();
+      L.marker([5.39913,10.4024]) .addTo(map) .bindPopup("<b>lycee bilingue de famleng-topo   </b>").openPopup();
+      L.marker([5.39356,10.4026]) .addTo(map) .bindPopup("<b>centre de sante integre de topo   </b>").openPopup();
+      L.marker([5.3921,10.4038]) .addTo(map) .bindPopup("<b>ecole catholique maternelle et primaire de famleng-topo   </b>").openPopup();
+      L.marker([5.39202,10.4081]) .addTo(map) .bindPopup("<b>ecole maternelle et primaire bilingue ipep  </b>").openPopup();
+      L.marker([5.39303,10.4071]) .addTo(map) .bindPopup("<b>ceeses de famleng (SOURDS) maternelle et primaire  </b>").openPopup();
+      L.marker([5.36214,10.405]) .addTo(map) .bindPopup("<b>ecole publique de soung</b>").openPopup();
+      L.marker([5.36838,10.4076]) .addTo(map) .bindPopup("<b>ecole catholique de soung</b>").openPopup();
+      L.marker([5.37075,10.3939]) .addTo(map) .bindPopup("<b>ecole primaire et maternelle catholique kamdjoung</b>").openPopup();
+      L.marker([5.36867,10.3859]) .addTo(map) .bindPopup("<b>ecole publique de keng</b>").openPopup();
+      L.marker([5.37607,10.3841]) .addTo(map) .bindPopup("<b>centre de sante integre de mtieki</b>").openPopup();
+      L.marker([5.37922,10.3798]) .addTo(map) .bindPopup("<b>groupe scolaire publique et primaire de mtieki</b>").openPopup();
+      L.marker([5.37864,10.3802]) .addTo(map) .bindPopup("<b>groupe scolaire maternelle de mtieki</b>").openPopup();
+      L.marker([5.37878,10.4257]) .addTo(map) .bindPopup("<b>ecole publique d'application primaire de houa</b>").openPopup();
+      L.marker([5.37884,10.426]) .addTo(map) .bindPopup("<b>ecole publique maternelle de houa</b>").openPopup();
+      L.marker([5.37895,10.4253]) .addTo(map) .bindPopup("<b>ecole publique bilingue de houa</b>").openPopup();
+      L.marker([5.38655,10.435]) .addTo(map) .bindPopup("<b>ecole polyvalent bilingue jacky et noel de kamgo</b>").openPopup();
+      L.marker([5.38431,10.4394]) .addTo(map) .bindPopup("<b>ecole publique de ha</b>").openPopup();
+      L.marker([5.37608,10.4371]) .addTo(map) .bindPopup("<b>ecole catholique saint modeste de ha</b>").openPopup();
+      L.marker([5.37503,10.4371]) .addTo(map) .bindPopup("<b>centre de sante integre de ha</b>").openPopup();
+      L.marker([5.38723,10.445]) .addTo(map) .bindPopup("<b>lycee de ha</b>").openPopup();
+      L.marker([5.39231,10.4368]) .addTo(map) .bindPopup("<b>ecole catholique primaire de kamgo</b>").openPopup();
+      L.marker([5.39408,10.4394]) .addTo(map) .bindPopup("<b>centre de sante integre de kamgo</b>").openPopup();
+      L.marker([5.39501,10.4422]) .addTo(map) .bindPopup("<b>groupe scolaire de kamgo</b>").openPopup();
+      L.marker([5.4141,10.4511]) .addTo(map) .bindPopup("<b>centre de sante integre de toba</b>").openPopup();
+      L.marker([5.4158,10.4513]) .addTo(map) .bindPopup("<b>ecole primaire catholique de toba</b>").openPopup();
+      L.marker([5.42145,10.455]) .addTo(map) .bindPopup("<b>ecole publique de tesse</b>").openPopup();
+      L.marker([5.42207,10.4548]) .addTo(map) .bindPopup("<b>ecole maternelle de tesse</b>").openPopup();
+      L.marker([5.43084,10.4615]) .addTo(map) .bindPopup("<b>lycee technique de tesse</b>").openPopup();
+      L.marker([5.42446,10.4319]) .addTo(map) .bindPopup("<b>ecole primaire saint albert de mbouo</b>").openPopup();
+      L.marker([5.44653,10.4169]) .addTo(map) .bindPopup("<b>college polyvalent kalasang</b>").openPopup();
+      L.marker([5.44625,10.4175]) .addTo(map) .bindPopup("<b>institut kamga ensegnement superieur</b>").openPopup();
+      L.marker([5.43545,10.4197]) .addTo(map) .bindPopup("<b>hopital de mbouo</b>").openPopup();
+      L.marker([5.4361,10.4185]) .addTo(map) .bindPopup("<b>college elie allegret de mbouo</b>").openPopup();
+      L.marker([5.43756,10.4183]) .addTo(map) .bindPopup("<b>ecole primaire pilote de mbouo</b>").openPopup();
+      L.marker([5.43722,10.4181]) .addTo(map) .bindPopup("<b>ecole maternelle pilote de mbouo</b>").openPopup();
+      L.marker([5.43846,10.4175]) .addTo(map) .bindPopup("<b>universite evangelique du cameroun</b>").openPopup();
+      L.marker([5.43493,10.4156]) .addTo(map) .bindPopup("<b>centre polyvalent de formation de mbouo</b>").openPopup();
+      L.marker([5.42542,10.1043]) .addTo(map) .bindPopup("<b>centre de sante integre de mbieng</b>").openPopup();
+      L.marker([5.42542,10.4043]) .addTo(map) .bindPopup("<b>ecole catholique de mbieng</b>").openPopup();
+      L.marker([5.41213,10.3889]) .addTo(map) .bindPopup("<b>ecole publique de famleng-thesso</b>").openPopup();
+      L.marker([5.40921,10.3981]) .addTo(map) .bindPopup("<b>centre de sante integre de thesso</b>").openPopup();
+      L.marker([5.40534,10.4066]) .addTo(map) .bindPopup("<b>ecole maternelle et primaire catholique saint georges famleng-djiogo</b>").openPopup();
+      L.marker([5.40786,10.4101]) .addTo(map) .bindPopup("<b>cetic de famleng-djiogo</b>").openPopup();
+      L.marker([5.3997,10.4177]) .addTo(map) .bindPopup("<b>ecole publique de yom</b>").openPopup();
+      L.marker([5.40872,10.4294]) .addTo(map) .bindPopup("<b>lycee bilingue de yom</b>").openPopup();
+      L.marker([5.40212,10.4231]) .addTo(map) .bindPopup("<b>ecole catholique de yom</b>").openPopup();
+      L.marker([5.40231,10.4273]) .addTo(map) .bindPopup("<b>centre medical d'arrondissement de poumegne</b>").openPopup();
+      L.marker([5.39962,10.4184]) .addTo(map) .bindPopup("<b>ecole maternelle publique de yom</b>").openPopup();
+      L.marker([5.39539,10.4133]) .addTo(map) .bindPopup("<b>ecole publique maternelle et primaire de yom</b>").openPopup();
+      L.marker([5.36055,10.4141]) .addTo(map) .bindPopup("<b>enieg de dja</b>").openPopup();
+      L.marker([5.36129,10.414]) .addTo(map) .bindPopup("<b>ecole maternelle publique de dja</b>").openPopup();
+      L.marker([5.36099,10.4145]) .addTo(map) .bindPopup("<b>ecole primaire publique inclusive d'application de dja</b>").openPopup();
+      L.marker([5.36244,10.4129]) .addTo(map) .bindPopup("<b>hopital de district de bandjoun</b>").openPopup();
+      L.marker([5.3441,10.4164]) .addTo(map) .bindPopup("<b>ecole publique de mbem</b>").openPopup();
+      L.marker([5.33516,10.4186]) .addTo(map) .bindPopup("<b>centre de sante integre de mbem</b>").openPopup();
+      L.marker([5.35584,10.4217]) .addTo(map) .bindPopup("<b>iut fotso victor</b>").openPopup();
+      L.marker([5.35732,10.4167]) .addTo(map) .bindPopup("<b>centre de sante la reference de dja</b>").openPopup();   
+      </script>
+  </body>
+</html>
